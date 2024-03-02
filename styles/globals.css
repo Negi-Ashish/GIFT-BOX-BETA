@@ -1,0 +1,103 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+:root {
+  --primary-color: #ff581b;
+}
+
+html,
+body {
+  /* --primary-color: #ffbe33; */
+  padding: 0;
+  margin: 5px;
+
+  background-size: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.daddy {
+  max-width: 131rem;
+  justify-content: center;
+  min-width: 100rem;
+}
+
+.text-format {
+  font-family: "Cera Pro", sans-serif;
+
+  /* Cera Pro,sans-serif; */
+}
+
+.navbar {
+  max-width: 131rem;
+  max-height: 10rem;
+}
+
+/* .inPugForm {
+  float: left;
+} */
+
+.brand {
+  color: var(--White);
+  margin-inline: 25px;
+}
+
+.brand:hover {
+  color: var(--primary-color);
+}
+
+.beta {
+  background-color: var(--primary-color);
+  color: #0d0f1a;
+  border-radius: 1rem;
+  font-style: normal;
+  padding: 5px;
+  margin-left: 2%;
+}
+
+/* .dropdown-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+} */
+
+.custom-dropdown {
+  width: 300px !important;
+  height: 100% !important;
+  /* Add any additional styling as needed */
+}
+
+.text-underline-navbar {
+  border-bottom: 1px solid var(--White);
+  padding-bottom: 15px;
+  border-color: var(--primary-color);
+}
+
+.alteredprivacy {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 1.5%;
+  border-radius: 10px;
+}
+
+.inprivacy {
+  padding: 1%;
+}
