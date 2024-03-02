@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import Router from "next/router";
 const Homepage = () => {
   let props = {
-    component: "landing",
+    component: "home",
   };
 
   return <Centrebar props={props}></Centrebar>;

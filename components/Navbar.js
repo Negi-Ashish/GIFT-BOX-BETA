@@ -8,7 +8,7 @@ import logo from "../public/logo_orange.png";
 import gift from "../public/giftbox.png";
 import CartItem from "./Cart/item";
 
-const Navbar = ({ children, props, props2, user }) => {
+const Navbar = ({ children, props }) => {
   const router = useRouter();
 
   let filters = [
@@ -54,16 +54,6 @@ const Navbar = ({ children, props, props2, user }) => {
     },
   ];
 
-  // React.useEffect(() => {
-  //   const token = window.localStorage.getItem('token') || window.sessionStorage.getItem('token');
-  //   // console.log('useeffect Navbar');
-  //   if (token) {
-  //     props2(true);
-  //   } else {
-  //     props2(false);
-  //   }
-  // }, []);
-
   let menuItems = [
     {
       href: "/home",
@@ -103,7 +93,7 @@ const Navbar = ({ children, props, props2, user }) => {
     // console.log('THIS IS FILTER OPTION', filter_option);
     if (filter_option[0] == "Logout") {
       removeToken();
-      props2(false);
+
       router.push("/auth/login");
     } else if (filter_option[0] == "Admin Panel") {
       router.push(`/auth/admin`);
@@ -114,13 +104,6 @@ const Navbar = ({ children, props, props2, user }) => {
     }
   }
 
-  if (user && user.user_role == "admin") {
-    filters.splice(filters.length - 1, 0, {
-      key: "Admin Panel",
-      value: "admin",
-    });
-  }
-
   return (
     <div className="min-h-screen flex flex-col daddy text-format">
       <header
@@ -129,7 +112,7 @@ const Navbar = ({ children, props, props2, user }) => {
           display: "flex", // Use flexbox
           alignItems: "center", // Center vertically
           justifyContent: "center", // Center horizontally
-          maxHeight: "100px",
+          maxHeight: "90px",
         }}
         className="navbar fixed-top "
       >
@@ -152,7 +135,7 @@ const Navbar = ({ children, props, props2, user }) => {
               right: "111px", // Adjust the left position as neede
             }}
           >
-            <Link href="/">
+            <Link href={"/"}>
               <Image
                 src={logo}
                 alt="Logo"
@@ -175,7 +158,7 @@ const Navbar = ({ children, props, props2, user }) => {
                 className={`${
                   router.asPath === href && "text-underline-navbar"
                 }`}
-                href={href}
+                href={`${href}`}
               >
                 <span className="brand text-2xl">{title}</span>
               </Link>
@@ -258,7 +241,7 @@ const Navbar = ({ children, props, props2, user }) => {
         </div>
       </header>
 
-      <div className="flex flex-col md:flex-row flex-1">
+      <div className="flex flex-col md:flex-row flex-1 fixed-bot">
         {<main className="flex-1">{children}</main>}
       </div>
     </div>
