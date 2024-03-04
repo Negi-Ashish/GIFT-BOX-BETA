@@ -15,13 +15,12 @@
   --primary-color: #ff581b;
 }
 
-html,
 body {
   /* --primary-color: #ffbe33; */
   padding: 0;
   margin: 5px;
 
-  background-size: cover;
+  background-color: darkgray;
 }
 
 a {
