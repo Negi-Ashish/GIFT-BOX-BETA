@@ -2,10 +2,9 @@ import Link from "next/link";
 // import { removeToken } from '../service/browserToken';
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { Dropdown, Avatar, Text, Grid, User, blue } from "@nextui-org/react";
+import { Dropdown, Avatar, Grid } from "@nextui-org/react";
 import Image from "next/image";
 import logo from "../public/logo_orange.png";
-import gift from "../public/giftbox.png";
 import CartItem from "./Cart/item";
 
 const Navbar = ({ children, props }) => {
@@ -64,8 +63,8 @@ const Navbar = ({ children, props }) => {
       title: "Shop",
     },
     {
-      href: "/top-picks",
-      title: "Top Picks",
+      href: "/highlights",
+      title: "Highlights",
     },
     {
       href: "/reviews",
@@ -76,8 +75,8 @@ const Navbar = ({ children, props }) => {
       title: "Support",
     },
     {
-      href: "/design",
-      title: "DesignYours!",
+      href: "/personalize",
+      title: "Personalize",
     },
   ];
 
@@ -241,7 +240,7 @@ const Navbar = ({ children, props }) => {
         </div>
       </header>
 
-      <div className="flex flex-col md:flex-row flex-1 fixed-bot">
+      <div className="flex flex-col md:flex-row flex-1 ">
         {<main className="flex-1">{children}</main>}
       </div>
     </div>
