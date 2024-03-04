@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "../styles/globals.css";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-
 import { useSSR } from "@nextui-org/react";
+import { ChakraProvider } from "@chakra-ui/react";
 // import { getImage } from '../fe_call/routes';
 
 function MyApp({ Component, pageProps }) {
@@ -35,30 +35,41 @@ function MyApp({ Component, pageProps }) {
 
   return (
     isBrowser && (
-      <Navbar props={showLogout} props2={setLogOut}>
-        <Head>
-          <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-            crossOrigin="anonymous"
-          />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
-            rel="stylesheet"
-          ></link>
+      <ChakraProvider>
+        <Navbar props={showLogout} props2={setLogOut}>
+          <Head>
+            <link
+              href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+              crossOrigin="anonymous"
+            />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+              rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossorigin
+            />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+              rel="stylesheet"
+            ></link>
 
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap"
-            rel="stylesheet"
-          ></link>
-        </Head>
-        <Component props2={setLogOut} {...pageProps} />
-      </Navbar>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+              rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossorigin
+            />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap"
+              rel="stylesheet"
+            ></link>
+          </Head>
+
+          <Component props2={setLogOut} {...pageProps} />
+        </Navbar>
+      </ChakraProvider>
     )
   );
 }
