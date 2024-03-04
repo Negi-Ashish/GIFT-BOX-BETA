@@ -74,22 +74,32 @@ export const Footer = () => (
           </label>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Why Gift Box?</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Why Gift Box?
+            </ListItem>
           </Link>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Our Story</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Our Story
+            </ListItem>
           </Link>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Careers</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Careers
+            </ListItem>
           </Link>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Press</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Press
+            </ListItem>
           </Link>
           <Link href={"/"}>
-            <ListItem mt={1}>FAQs</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              FAQs
+            </ListItem>
           </Link>
         </List>
       </Stack>
@@ -108,18 +118,26 @@ export const Footer = () => (
           </label>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>How it works?</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              How it works?
+            </ListItem>
           </Link>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Pricing</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Pricing
+            </ListItem>
           </Link>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Use Cases</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Use Cases
+            </ListItem>
           </Link>
           <Link href={"/"}>
-            <ListItem mt={1}>Integrations</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Integrations
+            </ListItem>
           </Link>
         </List>
       </Stack>
@@ -138,18 +156,26 @@ export const Footer = () => (
           </label>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Blog</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Blog
+            </ListItem>
           </Link>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Partnerships</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Partnerships
+            </ListItem>
           </Link>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Case studies</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Case studies
+            </ListItem>
           </Link>
           <Link href={"/"}>
-            <ListItem mt={1}>Media Assets</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Media Assets
+            </ListItem>
           </Link>
         </List>
       </Stack>
@@ -168,18 +194,26 @@ export const Footer = () => (
           </label>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Terms of Service</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Terms of Service
+            </ListItem>
           </Link>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Privacy Policy</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Privacy Policy
+            </ListItem>
           </Link>
           <Link href={"/"}>
             {" "}
-            <ListItem mt={1}>Offer terms</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              Offer terms
+            </ListItem>
           </Link>
           <Link href={"/"}>
-            <ListItem mt={1}>License</ListItem>
+            <ListItem mt={1} _hover={{ color: `var(--primary-color)` }}>
+              License
+            </ListItem>
           </Link>
         </List>
       </Stack>
@@ -189,9 +223,19 @@ export const Footer = () => (
           <b>Stay up to date</b>
         </label>
         <Stack justify="space-between" direction="row" align="center">
-          <Input placeholder="Enter your email" />
+          <Input
+            borderColor="#ff581b"
+            focusBorderColor="#ff581b"
+            placeholder="Enter your email"
+            _hover={{ borderColor: "orange" }}
+          />
 
-          <Button size={"md"} colorScheme="teal" variant="outline">
+          <Button
+            size={"md"}
+            colorScheme={"#ff581b;"}
+            textColor={"white"}
+            variant="outline"
+          >
             Subscribe
           </Button>
         </Stack>
@@ -232,7 +276,7 @@ export const Footer = () => (
           />
         </ButtonGroup>
         <Text
-          style={{ marginRight: "200px", marginTop: "40px" }}
+          style={{ marginRight: "350px", marginTop: "40px" }}
           fontSize="lg"
           color="fg.subtle"
         >

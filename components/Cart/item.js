@@ -1,20 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { Avatar } from "@nextui-org/react";
-import { Button } from "@nextui-org/react";
+
+import { Box, Image, Button } from "@chakra-ui/react";
 import { HeartIcon } from "./HeartIcon";
 export default function CartItem({ props }) {
   console.log("cartitem", props);
   return (
-    <div style={{ display: "flex" }}>
-      <Avatar
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+
+        minHeight: "100px",
+      }}
+    >
+      {/* <Avatar
         size="lg"
         as="div"
         src={props.uri}
-        style={{ cursor: "pointer" }}
-      />
-      <div>
+        style={{ cursor: "pointer", marginLeft: "75px" }}
+      /> */}
+      <Image borderRadius={"10"} src={props.uri} width={100} height={100} />
+      <div style={{ width: "100%" }}>
         <span
-          style={{ margin: "5px", flexDirection: "column", marginLeft: "50px" }}
+          style={{
+            margin: "5px",
+            flexDirection: "column",
+            marginLeft: "50px",
+            fontWeight: "bold",
+            fontFamily: "cursive",
+          }}
         >
           Engraved Wood
         </span>
@@ -22,8 +37,7 @@ export default function CartItem({ props }) {
         <span
           style={{ margin: "5px", flexDirection: "column", marginLeft: "50px" }}
         >
-          Quantity:
-          <span style={{ backgroundColor: "transperent" }}>
+          <span style={{ backgroundColor: "red" }}>
             <span
               style={{
                 paddingLeft: "5px",
@@ -53,7 +67,7 @@ export default function CartItem({ props }) {
         <span
           style={{ margin: "5px", flexDirection: "column", marginLeft: "50px" }}
         >
-          Total Cost: $75
+          $75
         </span>
       </div>
     </div>
